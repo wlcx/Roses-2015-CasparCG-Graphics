@@ -639,3 +639,71 @@ h1, h2, h3, h4 {
     background-color: #00d;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
+
+.namebar {
+  position: fixed;
+  width: 400px;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+  font-family: Helvetica;
+  padding: 10px;
+}
+
+.namebar.ng-hide {
+  right:-420px;
+}
+
+.namebar .bartitle {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgb(32,181,252);
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.namebar li {
+  padding: 5px;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(32,181,252);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.repeated-item.ng-enter, .repeated-item.ng-move {
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to
+ animate.
+*/
+.repeated-item.ng-enter.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+/*
+  We're using CSS keyframe animations for when
+  the leave event is triggered for the element
+  that has the .repeated-item class
+*/
+.repeated-item.ng-leave {
+  animation: 0.5s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}

@@ -1,0 +1,43 @@
+<div class="ui form segment">
+  <h2>Name Draw</h2>
+
+	<div class="ui grid center aligned">
+    	<div class="three wide column">
+    		<div class="field"><checkbox ng-model="namedraw.show" size="large" type="toggle">Show names</checkbox></div>
+    	</div>
+      <div class="three wide column">
+        <input type="text" placeholder="Title" ng-model="namedraw.title">
+      </div>
+      <div class="three wide column">
+        <div class="ui button" ng-click="addName()" >Add Name</div>
+      </div>
+      <div class="three wide column">
+        <div class="ui button" ng-click="clearNames()" >Clear All</div>
+      </div>
+    </div>
+
+    <div class="ui divider"></div>
+
+      <ul>
+        <li ng-repeat="(i, name) in namedraw.active track by $index">{{ name }}</li>
+      </ul>
+
+    <div class="ui divider"></div>
+
+<!-- This could do with being in some sort of loop. -->
+    <div ng-repeat="(i, name) in namedraw.names track by $index" class="ui grid center aligned">
+
+        <div class="sixteen wide column">
+            <div class="fields">
+                <div class="nine wide field">
+                    <input type="text" placeholder="Name" ng-model="namedraw.names[i]">
+                </div>
+                <div class="two wide field">
+                  <div class="ui button" ng-click="pushActive(i)"><i class="icon plus"></i> Push</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+ </div>

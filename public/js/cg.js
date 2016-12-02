@@ -200,3 +200,21 @@ app.controller('swimmingCtrl', ['$scope', 'socket',
         }
     }
 ]);
+
+app.controller('nameDrawCtrl', ['$scope', 'socket',
+    function($scope, socket){
+        socket.on("namedraw", function (msg) {
+            $scope.namedraw = msg;
+        });
+
+        $scope.$watch('namedraw', function() {
+            if (!$scope.namedraw) {
+                getNameDrawData();
+            }
+        }, true);
+
+        function getNameDrawData() {
+            socket.emit("namedraw:get");
+        }
+    }
+]);

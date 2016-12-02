@@ -13,6 +13,11 @@ var football = {lancScore: 0, yorkScore: 0};
 var dart = {};
 var swimming = {order: ''};
 var grid = {};
+var namedraw = {
+	show: false,
+	names: [
+	],
+};
 
 //Clock Functions
 var stopwatch = new Stopwatch();
@@ -160,6 +165,17 @@ io.on('connection', function(socket) {
     socket.on("swimming:get", function(msg) {
         io.sockets.emit("swimming", swimming);
     });
+
+		socket.on("namedraw", function(msg) {
+			namedraw = msg;
+			io.sockets.emit("namedraw", namedraw);
+			console.log(namedraw);
+		})
+
+		socket.on("namedraw:get", function(msg) {
+			io.sockets.emit("namedraw", namedraw);
+			console.log(namedraw);
+		})
 });
 
 //Serve the puplic dir

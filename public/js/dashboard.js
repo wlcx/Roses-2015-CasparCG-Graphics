@@ -63,6 +63,12 @@ app.controller('AppCtrl', ['$scope', '$location',
             type: 'link',
             icon: 'life ring',
         });
+        $scope.menu.push({
+            name: 'Name Draw',
+            url: '/namedraw',
+            type: 'link',
+            icon: 'tags',
+        });
     }
 ]);
 
@@ -105,6 +111,10 @@ app.config(['$routeProvider', 'localStorageServiceProvider',
             .when("/grid", {
                 templateUrl: '/partials/grid.tmpl.html',
                 controller: 'gridCGController'
+            })
+            .when("/namedraw", {
+                templateUrl: '/partials/namedraw.tmpl.html',
+                controller: 'nameDrawCGController'
             })
             .otherwise({redirectTo: '/general'});
     }
@@ -484,5 +494,43 @@ app.controller('swimmingCGController', ['$scope', 'socket',
         $(function () {
           $('.ui.dropdown').dropdown();
         });
+    }
+]);
+
+app.controller('nameDrawCGController', ['$scope', 'socket',
+    function($scope, socket){
+      socket.on("namedraw", function (msg) {
+          $scope.namedraw = msg;
+      });
+
+      $scope.$watch('namedraw', function() {
+          if ($scope.namedraw) {
+              socket.emit("namedraw", $scope.namedraw);
+          } else {
+              getNameDrawData();
+          }
+      }, true);
+
+      function getNameDrawData() {
+          socket.emit("namedraw:get");
+      }
+
+      $scope.addName = function() {
+          if (!$scope.namedraw.names) {
+            $scope.namedraw.names = [];
+          }
+          $scope.namedraw.names.push("New name");
+      };
+
+      $scope.clearNames = function() {
+        $scope.namedraw.active = [];
+      };
+
+      $scope.pushActive = function(i) {
+        if (!$scope.namedraw.active) {
+          $scope.namedraw.active = [];
+        }
+        $scope.namedraw.active.push($scope.namedraw.names.splice(i,1)[0]);
+      }
     }
 ]);
