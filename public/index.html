@@ -182,7 +182,10 @@
         </div>
         <div ng-controller="nameDrawCtrl">
           <div class="namebar" ng-show="namedraw.show">
-            <div class="bartitle">{{ namedraw.title }}</div>
+            <div>
+                <span style="vertical-align: middle" class="bartitle">{{ namedraw.title }}</span>
+                <img style="width: 100px; vertical-align: middle;" src="shield.svg" ng-show="namedraw.shield">
+                <img style="width: 50px; vertical-align: middle;" src="trophy.svg" ng-show="!namedraw.shield">
             <ul>
               <li ng-repeat="name in namedraw.active" class="repeated-item">{{ name }}</li>
             </ul>
