@@ -23,7 +23,6 @@ body {
     height: 40px;
     width: 500%;
 
-    background: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 71%, rgba(125,125,125,1) 85%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%) repeat;
 
     -webkit-background-size: 50% 100%;
     -webkit-animation-name: moving-gradient;
@@ -46,13 +45,6 @@ body {
     width: inherit;
     height: 40px;
 
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, .2) 0%,
-        rgba(255, 255, 255, .4) 50%,
-        rgba(255, 255, 255, 0) 50%,
-        rgba(255, 255, 255, .2) 100%
-    );
 }
 
 .bar.red {
@@ -158,8 +150,7 @@ h1, h2, h3, h4 {
     font-weight: normal;
     padding: 5px 8px;
 
-    background-color: #20B5FC;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
+    background-color: #20b5fc;
 }
 
 .lowerthird h2 {
@@ -170,7 +161,6 @@ h1, h2, h3, h4 {
     padding: 5px 8px;
 
     background-color: #000;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 /**************************************************/
@@ -201,7 +191,6 @@ h1, h2, h3, h4 {
     height: 40px;
     width: 500%;
 
-    background: linear-gradient(to left, rgba(225,0,0,1) 0%, rgba(225,0,0,1) 71%, rgba(225,25,25,1) 85%, rgba(225,0,0,1) 98%, rgba(225,0,0,1) 100%) repeat;
 
     -webkit-background-size: 50% 100%;
     -webkit-animation-name: moving-gradient;
@@ -235,12 +224,10 @@ h1, h2, h3, h4 {
     margin-right: 0px;
 
     background-color: #cd1d18;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .black {
     background-color: #000 !important;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 /**************************************************/
@@ -288,7 +275,6 @@ h1, h2, h3, h4 {
     color: #fff;
     padding: 6px;
     background-color: #cd1d18;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .total-score .york {
@@ -299,7 +285,6 @@ h1, h2, h3, h4 {
     color: #efbb39;
     padding: 6px;
     background-color: #000 !important;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 /**************************************************/
@@ -331,7 +316,6 @@ h1, h2, h3, h4 {
   width: 38%;
   color: #fff;
   background-color: #cd1d18;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .football .score.lanc p {
@@ -342,54 +326,17 @@ h1, h2, h3, h4 {
   width: 38%;
   color: #efbb39;
   background-color: #000;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
-}
-
-/**************************************************/
-/*              [Darts]                           */
-/**************************************************/
-
-.darts {
-  width: 25%;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: left;
-  font-size: 25px;
-  font-size: 1.8vw;
-
-  border-radius: 5px;
-  border: 8px solid rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
-}
-
-.darts .name, .darts .legs, .darts .score, .darts .leg, .darts .footer {
-  float: left;
-  line-height: 45px;
-  line-height: 3.2vw;
-
-  padding-left: 5px;
-}
-
-.darts .name {
-  width: 64%;
-}
-
-.darts .name.lanc {
-  color: #fff;
-  background-color: #cd1d18;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .darts .name.york {
   color: #efbb39;
   background-color: #000;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .darts .legs {
   width: 17%;
   color: #fff;
   background-color: #00d;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
   border-left: 2px solid #fff;
 }
 
@@ -397,7 +344,6 @@ h1, h2, h3, h4 {
   width: 19%;
   color: #fff;
   background-color: #00d;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
   border-left: 2px solid #fff;
 }
 
@@ -454,7 +400,6 @@ h1, h2, h3, h4 {
         padding: 5px;
 
         background-color: #00d;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
     }
 
     .grid .name, .grid .time {
@@ -462,7 +407,6 @@ h1, h2, h3, h4 {
         line-height: 40px;
         padding-left: 5px;
         background-color: #00d;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
         font-size: 25px;
     }
 
@@ -514,7 +458,6 @@ h1, h2, h3, h4 {
   line-height: 3.3vw;
   color: #fff;
   background-color: #00d;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimmingclock .clock * {
@@ -555,13 +498,11 @@ h1, h2, h3, h4 {
 .swimmingsplits .row.lanc {
     color: #fff;
     background-color: #cd1d18;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimmingsplits .row.york {
     color: #efbb39;
     background-color: #000;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimmingsplits .row .lane {
@@ -572,7 +513,6 @@ h1, h2, h3, h4 {
     text-align: center;
     color: #fff;
     background-color: #00d;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimmingsplits .row .splittime {
@@ -581,7 +521,6 @@ h1, h2, h3, h4 {
     padding: 0px 10px;
     color: #000;
     background-color: #fff;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimminglist {
@@ -604,7 +543,6 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     color: #000;
     background-color: #fff;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimminglist .row {
@@ -625,7 +563,6 @@ h1, h2, h3, h4 {
 .swimminglist .row.york {
     color: #efbb39;
     background-color: #000;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .swimminglist .row .lane {
@@ -637,7 +574,6 @@ h1, h2, h3, h4 {
     text-align: center;
     color: #fff;
     background-color: #00d;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
 .namebar {
