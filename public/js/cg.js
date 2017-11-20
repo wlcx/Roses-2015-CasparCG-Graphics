@@ -82,16 +82,10 @@ app.controller('bugCtrl', ['$scope', '$timeout', 'socket',
 app.controller('scoringCtrl', ['$scope', '$interval', '$http', 'socket',
     function($scope, $interval, $http, socket){
         $scope.tickInterval = 5000;
-        $scope.yorkScore = "";
-        $scope.lancScore = "";
+        $scope.yorkScore = "1";
+        $scope.lancScore = "1";
 
         var fetchScore = function () {
-            $http.get('http://roseslive.co.uk/score.json')
-                .success(function(data) {
-                    $scope.yorkScore = data.york;
-                    $scope.lancScore = data.lancs;
-                }
-            );
         };
 
         socket.on("score", function (state) {
